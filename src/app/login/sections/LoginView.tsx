@@ -39,7 +39,7 @@ function LoginView() {
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded shadow-md w-80">
+      <div className="p-8 rounded shadow-md w-80">
         <h2 className="text-2xl font-semibold mb-4">Login</h2>
         <form>
           <div className="mb-4">
@@ -76,7 +76,7 @@ function LoginView() {
           </div>
           <button
             onClick={onLogin}
-            className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition duration-300"
+            className="w-full bg-primary text-white py-2 rounded-md hover:bg-secondary transition duration-300"
             type="button"
           >
             Login
