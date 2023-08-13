@@ -2,7 +2,7 @@ import { getDataFromToken } from "@/helpers/auth";
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/helpers/prisma";
 
-export async function GETPrisma(request: NextRequest) {
+export async function GET(request: NextRequest) {
   try {
     const userId = await getDataFromToken(request);
     const user = await prisma.user.findUnique({
