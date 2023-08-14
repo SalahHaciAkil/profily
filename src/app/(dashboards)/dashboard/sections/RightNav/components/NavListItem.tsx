@@ -1,13 +1,9 @@
+import { NavLink } from "@/app/(dashboards)/types";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-interface NavListItemProps {
-  name: string;
-  icon?: string;
-  link: string;
-}
 
-function NavListItem(props: NavListItemProps) {
+function NavListItem(props: NavLink) {
   return (
     <li>
       <Link

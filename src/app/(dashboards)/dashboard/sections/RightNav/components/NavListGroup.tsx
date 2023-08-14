@@ -1,15 +1,14 @@
 "use client";
-import { NavListItem } from "@/app/dashboard/sections/RightNav/components";
+import { NavListItem } from "@/app/(dashboards)/dashboard/sections/RightNav/components";
+import { NavLink } from "@/app/(dashboards)/types";
 import Image from "next/image";
 import React from "react";
 
-function NavListGroup({
-  icon,
-  list,
-}: {
-  icon: string;
-  list: { name: string; icon: string; link: string }[];
-}) {
+interface Props {
+  icon?: string;
+  list: NavLink[];
+}
+function NavListGroup({ icon, list }: Props) {
   const [open, setOpen] = React.useState(false);
 
   //   <li>
@@ -66,7 +65,7 @@ function NavListGroup({
 
         {open && (
           <ul className="py-2 space-y-2">
-            {list.map((item: { name: string; icon: string; link: string }) => (
+            {list.map((item: NavLink) => (
               <>
                 <NavListItem
                   name={item.name}

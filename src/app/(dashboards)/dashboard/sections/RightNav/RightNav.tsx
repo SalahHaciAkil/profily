@@ -1,12 +1,13 @@
 import React from "react";
-import { NAV_LIST_ITEMS } from "@/constants/dashboard";
-import {
-  Divider,
-  NavListGroup,
-  NavListItem,
-} from "@/app/dashboard/sections/RightNav/components";
 
-function RightNav() {
+import { NavLink } from "@/app/(dashboards)/types";
+import { Divider, NavListGroup, NavListItem } from "@/app/(dashboards)/dashboard/sections/RightNav/components";
+
+interface Props {
+  navListItems: NavLink[];
+}
+
+function RightNav({ navListItems }: Props) {
   return (
     <aside
       id="logo-sidebar"
@@ -15,9 +16,9 @@ function RightNav() {
     >
       <div className="h-full px-3 pb-4 overflow-y-auto bg-secondary">
         <ul className="space-y-2">
-          <NavListGroup list={NAV_LIST_ITEMS} icon={NAV_LIST_ITEMS[0].icon} />
+          <NavListGroup list={navListItems} icon={navListItems[0].icon} />
           <Divider text="user interface" />
-          {NAV_LIST_ITEMS.map((item) => (
+          {navListItems.map((item) => (
             <>
               <NavListItem
                 key={item.name}
@@ -36,7 +37,7 @@ function RightNav() {
 export default RightNav;
 // "use client";
 // import React from "react";
-// import { NAV_LIST_ITEMS } from "@/constants/dashboard";
+// import { navListItems } from "@/constants/dashboard";
 // import {
 //   AppName,
 //   Divider,
@@ -82,10 +83,10 @@ export default RightNav;
 //     <div className="right-nav hidden sm:block w-[260px] bg-slate-800 h-full overflow-auto">
 //       <AppName />
 //       <Divider text="user interface" />
-//       <DropDownItems title="title" items={NAV_LIST_ITEMS} />
-//       <DropDownItems title="title" items={NAV_LIST_ITEMS} />
+//       <DropDownItems title="title" items={navListItems} />
+//       <DropDownItems title="title" items={navListItems} />
 //       {/* <ul className="list-item ps-2">
-//         {NAV_LIST_ITEMS.map((item) => (
+//         {navListItems.map((item) => (
 //           <NavListItem
 //             key={item.name}
 //             icon={item.icon}
