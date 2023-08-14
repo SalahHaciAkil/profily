@@ -42,9 +42,9 @@ function LoginView() {
 
   return (
     <div className="flex justify-around bg-gray-100">
-      <div className="justify-center flex flex-1">
+      <div className="justify-center flex flex-1 max-md:hidden ">
         <svg
-          className="mt-28"
+          className="mt-28 "
           xmlns="http://www.w3.org/2000/svg"
           data-name="Layer 1"
           width="400px"
@@ -174,7 +174,7 @@ function LoginView() {
         </svg>
       </div>
 
-      <div className="  w-2/6	bg-white ">
+      <div className="  w-2/6	bg-white max-md:w-full max-md:bg-slate-50">
         <div className="mt-16 mx-auto w-9/12">
           <h2 className="text-2xl font-semibold mb-1.5 text-zinc-600">
             Welcome to Materio! 👋🏻
