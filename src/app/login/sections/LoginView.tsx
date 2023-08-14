@@ -44,7 +44,7 @@ function LoginView() {
     <div className="flex justify-around bg-gray-100">
       <div className="justify-center flex flex-1 max-md:hidden ">
         <svg
-          className="mt-28 "
+          className="mt-28"
           xmlns="http://www.w3.org/2000/svg"
           data-name="Layer 1"
           width="400px"
@@ -174,27 +174,19 @@ function LoginView() {
         </svg>
       </div>
 
-      <div className="  w-2/6	bg-white max-md:w-full max-md:bg-slate-50">
-        <div className="mt-16 mx-auto w-9/12">
+      <div className="w-2/6	bg-white max-md:w-full max-md:bg-slate-50">
+        <div className="mt-20 mx-auto w-9/12">
           <h2 className="text-2xl font-semibold mb-1.5 text-zinc-600">
             Welcome to Materio! 👋🏻
           </h2>
-
           <h6 className=" text-zinc-400 w-9/12 text-sm mb-4">
             Please sign-in to your account and start the adventure
           </h6>
-
           <form className="mt-5">
             <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-medium mb-2"
-                htmlFor="username"
-              >
-                Email
-              </label>
               <input
-                placeholder="admin@materio.com"
-                className="w-full px-3 py-2 border rounded-md focus:ring focus:ring-indigo-200"
+                placeholder="Email"
+                className="w-full px-3 py-3 border rounded-md focus:ring focus:ring-indigo-200"
                 onChange={(e) => setUser({ ...user, email: e.target.value })}
                 type="text"
                 id="username"
@@ -202,19 +194,15 @@ function LoginView() {
                 required
               />
             </div>
-            <div className="mb-2 relative	">
-              <label
-                className="block text-gray-700 text-sm font-medium mb-2"
-                htmlFor="password"
-              >
-                Password
-              </label>
+            <div className="mb-6 relative">
+
               <input
+              placeholder="Password"
                 onChange={(e) => {
                   setUser({ ...user, password: e.target.value });
                   setpassInputType("password");
                 }}
-                className="w-full px-3 py-2 border rounded-md focus:ring focus:ring-indigo-200"
+                className="w-full px-3 py-3 border rounded-md focus:ring focus:ring-indigo-200"
                 type={passInputType}
                 id="password"
                 name="password"
@@ -224,7 +212,7 @@ function LoginView() {
 
               {showIcon ? (
                 <svg
-                  className="w-4 h-6 text-gray-300 absolute	top-9 right-4 hover:cursor-pointer"
+                  className="w-4 h-6 text-gray-300 absolute	top-3 right-4 hover:cursor-pointer"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -240,7 +228,7 @@ function LoginView() {
                 </svg>
               ) : (
                 <svg
-                  className="w-4 h-6 text-gray-300 absolute	top-9 right-4 hover:cursor-pointer"
+                  className="w-4 h-6 text-gray-300 absolute	top-3 right-4 hover:cursor-pointer"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -299,7 +287,7 @@ function LoginView() {
             <hr className="w-2/5 border-gray-300" />
           </div>
           <div className="flex justify-center items-center gap-7 mb-20 mt-8">
-            <Link className="hover:bg-slate-200 p-2  rounded-full" href={""}>
+            <Link className="hover:bg-gray-50 p-2 rounded-full " href={""}>
               <svg
                 className="w-6 h-6 text-blue-800"
                 aria-hidden="true"
@@ -315,7 +303,7 @@ function LoginView() {
               </svg>
             </Link>
 
-            <Link className=" hover:bg-slate-200 p-2  rounded-full" href={""}>
+            <Link className="hover:bg-gray-50 p-2 rounded-full" href={""}>
               <svg
                 className="w-6 h-6 text-blue-400 "
                 aria-hidden="true"
@@ -331,7 +319,7 @@ function LoginView() {
               </svg>
             </Link>
             {/* TODO: ADD LINK */}
-            <Link className=" hover:bg-slate-200 p-2  rounded-full" href={""}>
+            <Link className=" hover:bg-gray-50 p-2  rounded-full" href={""}>
               <svg
                 className="w-6 h-6 text-black-800 "
                 aria-hidden="true"
@@ -347,7 +335,7 @@ function LoginView() {
               </svg>
             </Link>
             {/* TODO add link */}
-            <Link className="hover:bg-slate-200 p-2  rounded-full" href={""}>
+            <Link className="hover:bg-gray-50	 p-2  rounded-full" href={""}>
               <svg
                 className="w-6 h-6 text-gray-800 items-center mb-2"
                 aria-hidden="true"
