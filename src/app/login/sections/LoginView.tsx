@@ -7,10 +7,8 @@ import { toast } from "react-hot-toast";
 import Image from "next/image";
 
 function LoginView() {
-  const [passValue, setpassValue] = React.useState("");
   const [passInputType, setpassInputType] = React.useState("password");
   const [showIcon, setshowIcon] = React.useState(true);
-
   const router = useRouter();
   const [user, setUser] = React.useState({
     email: "",
@@ -43,8 +41,8 @@ function LoginView() {
   }, [user]);
 
   return (
-    <div className="flex  justify-around  bg-gray-100">
-      <div className="  justify-center  flex flex-1">
+    <div className="flex justify-around bg-gray-100">
+      <div className="justify-center flex flex-1">
         <svg
           className="mt-28"
           xmlns="http://www.w3.org/2000/svg"
@@ -182,10 +180,9 @@ function LoginView() {
             Welcome to Materio! 👋🏻
           </h2>
 
-          <h6 className=" text-zinc-400 w-9/12  text-sm mb-4">
+          <h6 className=" text-zinc-400 w-9/12 text-sm mb-4">
             Please sign-in to your account and start the adventure
           </h6>
-        
 
           <form className="mt-5">
             <div className="mb-4">
@@ -215,26 +212,24 @@ function LoginView() {
               <input
                 onChange={(e) => {
                   setUser({ ...user, password: e.target.value });
-                  setpassValue(e.target.value);
                   setpassInputType("password");
                 }}
-                className=" w-full px-3 py-2 border rounded-md focus:ring focus:ring-indigo-200"
+                className="w-full px-3 py-2 border rounded-md focus:ring focus:ring-indigo-200"
                 type={passInputType}
                 id="password"
                 name="password"
-                value={passValue}
+                value={user.password}
                 required
               />
 
               {showIcon ? (
                 <svg
-                  className="w-4 h-6 text-gray-300 absolute	top-9 right-4 hover:cursor-pointer "
+                  className="w-4 h-6 text-gray-300 absolute	top-9 right-4 hover:cursor-pointer"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   onClick={(eo) => {
-                    console.log(passValue);
                     setpassInputType("text");
                     setshowIcon(false);
                   }}
@@ -245,14 +240,13 @@ function LoginView() {
                 </svg>
               ) : (
                 <svg
-                  className="w-4 h-6 text-gray-300 absolute	top-9 right-4 hover:cursor-pointer "
+                  className="w-4 h-6 text-gray-300 absolute	top-9 right-4 hover:cursor-pointer"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 20 14"
                   onClick={() => {
                     setpassInputType("password");
-
                     setshowIcon(true);
                   }}
                 >
@@ -276,10 +270,11 @@ function LoginView() {
               />
               <label
                 htmlFor="checked-checkbox"
-                className="ml-2 text-sm 	flex-1	font-medium text-gray-900 dark:text-gray-400"
+                className="ml-2 text-sm flex-1 font-medium text-gray-900 dark:text-gray-400"
               >
                 Remember Me{" "}
               </label>
+              {/* TODO ADD LINK */}
               <Link className="text-sm text-purple-700" href={""}>
                 Forgot Password?
               </Link>
@@ -292,22 +287,19 @@ function LoginView() {
               Login
             </button>
           </form>
-
           <div className="flex justify-center gap-1 items-center mt-10">
             <p className="text-xs text-gray-400">New on our platform?</p>
             <Link className="text-purple-700 text-sm" href="/signup">
               Create new account
             </Link>
           </div>
-
           <div className="flex items-center justify-center gap-3 mt-10">
             <hr className="w-2/5 border-gray-300" />
             <p>or</p>
             <hr className="w-2/5 border-gray-300" />
           </div>
-
           <div className="flex justify-center items-center gap-7 mb-20 mt-8">
-            <Link className=" hover:bg-slate-200 p-2  rounded-full" href={""}>
+            <Link className="hover:bg-slate-200 p-2  rounded-full" href={""}>
               <svg
                 className="w-6 h-6 text-blue-800"
                 aria-hidden="true"
@@ -338,7 +330,7 @@ function LoginView() {
                 />
               </svg>
             </Link>
-
+            {/* TODO: ADD LINK */}
             <Link className=" hover:bg-slate-200 p-2  rounded-full" href={""}>
               <svg
                 className="w-6 h-6 text-black-800 "
@@ -354,10 +346,10 @@ function LoginView() {
                 />
               </svg>
             </Link>
-
-            <Link className=" hover:bg-slate-200 p-2  rounded-full 	" href={""}>
+            {/* TODO add link */}
+            <Link className="hover:bg-slate-200 p-2  rounded-full" href={""}>
               <svg
-                className="w-6 h-6 text-gray-800 items-center mb-2	"
+                className="w-6 h-6 text-gray-800 items-center mb-2"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
