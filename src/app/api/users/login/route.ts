@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import bcryptjs from "bcryptjs";
 import jwt from "jsonwebtoken";
 import prisma from "@/helpers/prisma";
+import { TOKEN_EXPIRESIN, TOKEN_SECRET } from "@/constants/env";
 
 export async function POST(request: NextRequest) {
   try {
@@ -31,8 +32,8 @@ export async function POST(request: NextRequest) {
     };
 
     //create token
-    const token = jwt.sign(tokenData, process.env.TOKEN_SECRET!, {
-      expiresIn: process.env.TOKEN_EXPIRESIN!,
+    const token = jwt.sign(tokenData, TOKEN_SECRET!, {
+      expiresIn: TOKEN_EXPIRESIN!,
     });
 
     const response = NextResponse.json({
