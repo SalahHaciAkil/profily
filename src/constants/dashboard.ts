@@ -1,39 +1,16 @@
-import { settingI, homeI } from "@/assets/icons";
-interface NavItem {
-  name: string;
-  icon: string;
-  link: string;
-}
-export const NAV_LIST_ITEMS: NavItem[] = [
+import { NavLink } from "@/app/(dashboards)/types";
+import { settingI, homeI, sitesI } from "@/assets/icons";
+
+export const DASHBOARD_NAV_LIST_ITEMS: NavLink[] = [
   {
-    name: "Dashboard",
+    name: "Main",
     icon: homeI,
     link: "/dashboard",
   },
   {
-    name: "Experiences",
-    icon: homeI,
-    link: "/dashboard",
-  },
-  {
-    name: "Educations",
-    icon: homeI,
-    link: "/dashboard",
-  },
-  {
-    name: "Projects",
-    icon: homeI,
-    link: "/dashboard",
-  },
-  {
-    name: "Awards",
-    icon: homeI,
-    link: "/dashboard",
-  },
-  {
-    name: "Publications",
-    icon: homeI,
-    link: "/dashboard",
+    name: "Sites",
+    icon : sitesI,
+    link: "/dashboard/sites",
   },
   {
     name: "Settings",

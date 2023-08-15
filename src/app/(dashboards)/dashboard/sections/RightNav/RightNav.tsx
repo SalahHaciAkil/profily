@@ -1,7 +1,11 @@
 import React from "react";
 
 import { NavLink } from "@/app/(dashboards)/types";
-import { Divider, NavListGroup, NavListItem } from "@/app/(dashboards)/dashboard/sections/RightNav/components";
+import {
+  Divider,
+  NavListGroup,
+  NavListItem,
+} from "@/app/(dashboards)/dashboard/sections/RightNav/components";
 
 interface Props {
   navListItems: NavLink[];
@@ -16,16 +20,24 @@ function RightNav({ navListItems }: Props) {
     >
       <div className="h-full px-3 pb-4 overflow-y-auto bg-secondary">
         <ul className="space-y-2">
-          <NavListGroup list={navListItems} icon={navListItems[0].icon} />
-          <Divider text="user interface" />
           {navListItems.map((item) => (
             <>
-              <NavListItem
-                key={item.name}
-                name={item.name}
-                icon={item.icon}
-                link={item.link}
-              />
+              {item?.type === "group" && (
+                <NavListGroup
+                  name="Settings"
+                  list={item.links!}
+                  icon={navListItems[0].icon}
+                />
+              )}
+              {item?.type === "divider" && <Divider text={item.name} />}
+              {!item?.type && (
+                <NavListItem
+                  key={item.name}
+                  name={item.name}
+                  icon={item.icon}
+                  link={item.link}
+                />
+              )}
             </>
           ))}
         </ul>
