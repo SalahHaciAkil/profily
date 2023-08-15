@@ -109,8 +109,8 @@ function SignUpView() {
     // </div>
 
     <>
-      <div className="flex justify-around   bg-white">
-        <div className="justify-center flex flex-1 max-md:hidden ">
+      <div className="flex justify-around bg-white h-full">
+        <div className="justify-center basis-2/3 hidden sm:flex ">
           <svg
             className="mt-28 "
             xmlns="http://www.w3.org/2000/svg"
@@ -269,7 +269,7 @@ function SignUpView() {
           </svg>
         </div>
 
-        <div className="w-2/6 max-md:w-full bg-gray-100 max-md:bg-slate-50">
+        <div className="max-sm:basis-full basis-1/3 bg-gray-100 flex flex-col justify-center items-center">
           <div className="mt-20 mx-auto w-9/12">
             <h2 className="text-2xl font-semibold mb-1.5 text-zinc-600">
               Adventure starts here 🚀
@@ -362,7 +362,7 @@ function SignUpView() {
                 <input
                   id="checked-checkbox"
                   type="checkbox"
-                  className="w-4 h-4 text-purple-700 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
+                  className="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
                 />
                 <label
                   htmlFor="checked-checkbox"
@@ -371,17 +371,14 @@ function SignUpView() {
                   I agree to
                 </label>
                 {/* TODO ADD LINK */}
-                <Link
-                  className="text-xs font-bold text-purple-700 ml-1"
-                  href={""}
-                >
+                <Link className="text-xs font-bold text-primary ml-1" href={""}>
                   privacy policy & terms{" "}
                 </Link>
               </div>
               <button
                 //TODO: onclick??
                 //  onClick={onLogin}
-                className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition duration-300"
+                className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-primary transition duration-300"
                 type="button"
               >
                 SIGN UP{" "}
@@ -389,7 +386,7 @@ function SignUpView() {
             </form>
             <div className="flex justify-center gap-1 items-center mt-10">
               <p className="text-sm text-gray-400">Already have an account?</p>
-              <Link className="text-purple-700 text-sm" href="/login">
+              <Link className="text-primary text-sm" href="/login">
                 Sign in instead{" "}
               </Link>
             </div>

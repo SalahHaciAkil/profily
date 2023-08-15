@@ -1,4 +1,4 @@
-import { SignUpView } from "@/app/signup/sections";
+import { SignUpView } from "@/app/(auth)/signup/sections";
 
 export default function SignUpPage() {
   return <SignUpView />;
