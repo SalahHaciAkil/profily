@@ -41,8 +41,8 @@ function LoginView() {
   }, [user]);
 
   return (
-    <div className="flex justify-around bg-gray-100">
-      <div className="justify-center flex flex-1 max-md:hidden ">
+    <div className="flex justify-around bg-gray-100 h-full">
+      <div className="justify-center basis-2/3 hidden sm:flex">
         <svg
           className="mt-28"
           xmlns="http://www.w3.org/2000/svg"
@@ -174,7 +174,7 @@ function LoginView() {
         </svg>
       </div>
 
-      <div className="w-2/6	bg-white max-md:w-full max-md:bg-slate-50">
+      <div className="max-sm:basis-full basis-1/3 bg-white flex flex-col justify-center items-center">
         <div className="mt-20 mx-auto w-9/12">
           <h2 className="text-2xl font-semibold mb-1.5 text-zinc-600">
             Welcome to Materio! 👋🏻
@@ -196,17 +196,15 @@ function LoginView() {
               />
             </div>
             <div className="mb-6 relative">
-              <input
-                placeholder="Password"
-                onChange={(e) => {
+              <AuthInput
+                placeHolder="Password"
+                onChange={(e: any) => {
                   setUser({ ...user, password: e.target.value });
                   setPassInputType("password");
                 }}
-                className="w-full px-3 py-3 border rounded-md focus:ring focus:ring-indigo-200"
                 type={passInputType}
                 id="password"
                 name="password"
-                value={user.password}
                 required
               />
 
@@ -250,6 +248,7 @@ function LoginView() {
                 </svg>
               )}
             </div>
+
             <div className="flex items-center mb-6">
               <input
                 id="checked-checkbox"
@@ -267,6 +266,7 @@ function LoginView() {
                 Forgot Password?
               </Link>
             </div>
+
             <button
               onClick={onLogin}
               className="w-full bg-primary text-white py-2 rounded-md hover:bg-primary transition duration-300"
