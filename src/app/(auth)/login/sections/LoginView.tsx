@@ -1,14 +1,14 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import Image from "next/image";
+import { AuthInput } from "@/app/(auth)/components";
 
 function LoginView() {
-  const [passInputType, setpassInputType] = React.useState("password");
-  const [showIcon, setshowIcon] = React.useState(true);
+  const [passInputType, setPassInputType] = React.useState("password");
+  const [showIcon, setShowIcon] = React.useState(true);
   const router = useRouter();
   const [user, setUser] = React.useState({
     email: "",
@@ -184,23 +184,23 @@ function LoginView() {
           </h6>
           <form className="mt-5">
             <div className="mb-4">
-              <input
-                placeholder="Email"
-                className="w-full px-3 py-3 border rounded-md focus:ring focus:ring-indigo-200"
-                onChange={(e) => setUser({ ...user, email: e.target.value })}
-                type="text"
-                id="username"
-                name="username"
+              <AuthInput
+                placeHolder="Email"
+                onChange={(e: any) =>
+                  setUser({ ...user, email: e.target.value })
+                }
+                type={"text"}
+                id={"username"}
+                name={"username"}
                 required
               />
             </div>
             <div className="mb-6 relative">
-
               <input
-              placeholder="Password"
+                placeholder="Password"
                 onChange={(e) => {
                   setUser({ ...user, password: e.target.value });
-                  setpassInputType("password");
+                  setPassInputType("password");
                 }}
                 className="w-full px-3 py-3 border rounded-md focus:ring focus:ring-indigo-200"
                 type={passInputType}
@@ -218,8 +218,8 @@ function LoginView() {
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   onClick={(eo) => {
-                    setpassInputType("text");
-                    setshowIcon(false);
+                    setPassInputType("text");
+                    setShowIcon(false);
                   }}
                 >
                   <path d="m2 13.587 3.055-3.055A4.913 4.913 0 0 1 5 10a5.006 5.006 0 0 1 5-5c.178.008.356.026.532.054l1.744-1.744A8.973 8.973 0 0 0 10 3C4.612 3 0 8.336 0 10a6.49 6.49 0 0 0 2 3.587Z" />
@@ -234,8 +234,8 @@ function LoginView() {
                   fill="none"
                   viewBox="0 0 20 14"
                   onClick={() => {
-                    setpassInputType("password");
-                    setshowIcon(true);
+                    setPassInputType("password");
+                    setShowIcon(true);
                   }}
                 >
                   <g
