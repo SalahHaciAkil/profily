@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import { AuthInput } from "../../components";
 
 function SignUpView() {
   const [passInputType, setpassInputType] = React.useState("password");
@@ -268,7 +269,6 @@ function SignUpView() {
             />
           </svg>
         </div>
-
         <div className="max-sm:basis-full basis-1/3 bg-gray-100 flex flex-col justify-center items-center">
           <div className="mt-20 mx-auto w-9/12">
             <h2 className="text-2xl font-semibold mb-1.5 text-zinc-600">
@@ -281,10 +281,11 @@ function SignUpView() {
 
             <form className="mt-5">
               <div className="mb-4">
-                <input
-                  placeholder="Username"
-                  className="w-full px-3 py-3 border rounded-md focus:ring focus:ring-indigo-200"
-                  onChange={(e) => setUser({ ...user, email: e.target.value })}
+                <AuthInput
+                  placeHolder="Username"
+                  onChange={(e: any) =>
+                    setUser({ ...user, email: e.target.value })
+                  }
                   type="text"
                   id="username"
                   name="username"
@@ -293,10 +294,11 @@ function SignUpView() {
               </div>
 
               <div className="mb-4">
-                <input
-                  placeholder="Email"
-                  className="w-full px-3 py-3 border rounded-md focus:ring focus:ring-indigo-200"
-                  onChange={(e) => setUser({ ...user, email: e.target.value })}
+                <AuthInput
+                  placeHolder="Email"
+                  onChange={(e: any) =>
+                    setUser({ ...user, email: e.target.value })
+                  }
                   type="text"
                   id="username"
                   name="username"
@@ -304,20 +306,17 @@ function SignUpView() {
                 />
               </div>
               <div className="mb-4 relative	">
-                <input
-                  onChange={(e) => {
+                <AuthInput
+                  placeHolder="Password"
+                  onChange={(e: any) => {
                     setUser({ ...user, password: e.target.value });
                     setpassInputType("password");
                   }}
-                  className="w-full px-3 py-3 border rounded-md focus:ring focus:ring-indigo-200"
                   type={passInputType}
                   id="password"
                   name="password"
-                  value={user.password}
-                  placeholder="Password"
                   required
                 />
-
                 {showIcon ? (
                   <svg
                     className="w-5 h-6 text-gray-300 absolute	top-3 right-4 hover:cursor-pointer"
