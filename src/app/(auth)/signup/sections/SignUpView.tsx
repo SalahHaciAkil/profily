@@ -280,7 +280,7 @@ function SignUpView() {
             </h6>
 
             <form className="mt-5">
-              <div className="mb-4">
+              <div className="relative z-0 mb-6">
                 <AuthInput
                   placeHolder="Username"
                   onChange={(e: any) =>
@@ -292,8 +292,7 @@ function SignUpView() {
                   required
                 />
               </div>
-
-              <div className="mb-4">
+              <div className="relative z-0 mb-6">
                 <AuthInput
                   placeHolder="Email"
                   onChange={(e: any) =>
@@ -305,7 +304,7 @@ function SignUpView() {
                   required
                 />
               </div>
-              <div className="mb-4 relative	">
+              <div className="relative z-0 mb-6">
                 <AuthInput
                   placeHolder="Password"
                   onChange={(e: any) => {
@@ -319,7 +318,7 @@ function SignUpView() {
                 />
                 {showIcon ? (
                   <svg
-                    className="w-5 h-6 text-gray-300 absolute	top-3 right-4 hover:cursor-pointer"
+                    className="w-5 h-6 text-gray-300 absolute	top-2 right-4 hover:cursor-pointer"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
@@ -357,7 +356,7 @@ function SignUpView() {
                   </svg>
                 )}
               </div>
-              <div className="flex items-center mb-6">
+              <div className="relative z-0 mb-6">
                 <input
                   id="checked-checkbox"
                   type="checkbox"
@@ -374,6 +373,7 @@ function SignUpView() {
                   privacy policy & terms{" "}
                 </Link>
               </div>
+
               <button
                 //TODO: onclick??
                 //  onClick={onLogin}

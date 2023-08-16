@@ -183,7 +183,7 @@ function LoginView() {
             Please sign-in to your account and start the adventure
           </h6>
           <form className="mt-5">
-            <div className="mb-4">
+            <div className="relative z-0 mb-6">
               <AuthInput
                 placeHolder="Email"
                 onChange={(e: any) =>
@@ -195,7 +195,7 @@ function LoginView() {
                 required
               />
             </div>
-            <div className="mb-6 relative">
+            <div className="relative z-0 mb-6">
               <AuthInput
                 placeHolder="Password"
                 onChange={(e: any) => {
@@ -210,7 +210,7 @@ function LoginView() {
 
               {showIcon ? (
                 <svg
-                  className="w-4 h-6 text-gray-300 absolute	top-3 right-4 hover:cursor-pointer"
+                  className="w-4 h-6 text-gray-300 absolute	top-2 right-4 hover:cursor-pointer"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
