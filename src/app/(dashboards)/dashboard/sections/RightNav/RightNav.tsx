@@ -15,10 +15,10 @@ function RightNav({ navListItems }: Props) {
   return (
     <aside
       id="logo-sidebar"
-      className="fixed top-0 left-0 z-40 w-64 h-screen pt-3 transition-transform -translate-x-full border-r  sm:translate-x-0 bg-secondary"
+      className="fixed top-0 left-0 z-40 w-64 h-screen pt-3 transition-transform -translate-x-full border-r  sm:translate-x-0 bg-secondary-100"
       aria-label="Sidebar"
     >
-      <div className="h-full px-3 pb-4 overflow-y-auto bg-secondary">
+      <div className="h-full px-3 pb-4 overflow-y-auto bg-secondary-100">
         <ul className="space-y-2">
           {navListItems.map((item) => (
             <>

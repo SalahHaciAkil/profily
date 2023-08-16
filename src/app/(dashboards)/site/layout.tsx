@@ -4,6 +4,7 @@ import {
   RightNav,
 } from "@/app/(dashboards)/dashboard/sections";
 import { DASHBOARD_NAV_LIST_ITEMS } from "@/constants/dashboard";
+import { SITE_NAV_LIST_ITEMS } from "@/constants/site-dashboard";
 
 export const metadata = {
   title: "Create Next App",
@@ -18,7 +19,7 @@ export default function RootLayout({
   return (
     <>
       <Nav />
-      <RightNav navListItems={DASHBOARD_NAV_LIST_ITEMS} />
+      <RightNav navListItems={SITE_NAV_LIST_ITEMS} />
       <ContentWrapper>{children}</ContentWrapper>
     </>
   );

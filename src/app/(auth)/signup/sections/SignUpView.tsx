@@ -362,7 +362,7 @@ function SignUpView() {
                 <input
                   id="checked-checkbox"
                   type="checkbox"
-                  className="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
+                  className="w-4 h-4 text-primary-100 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
                 />
                 <label
                   htmlFor="checked-checkbox"
@@ -371,14 +371,14 @@ function SignUpView() {
                   I agree to
                 </label>
                 {/* TODO ADD LINK */}
-                <Link className="text-xs font-bold text-primary ml-1" href={""}>
+                <Link className="text-xs font-bold text-primary-100 ml-1" href={""}>
                   privacy policy & terms{" "}
                 </Link>
               </div>
               <button
                 //TODO: onclick??
                 //  onClick={onLogin}
-                className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-primary transition duration-300"
+                className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-primary-100 transition duration-300"
                 type="button"
               >
                 SIGN UP{" "}
@@ -386,7 +386,7 @@ function SignUpView() {
             </form>
             <div className="flex justify-center gap-1 items-center mt-10">
               <p className="text-sm text-gray-400">Already have an account?</p>
-              <Link className="text-primary text-sm" href="/login">
+              <Link className="text-primary-100 text-sm" href="/login">
                 Sign in instead{" "}
               </Link>
             </div>

@@ -14,9 +14,21 @@ module.exports = {
       },
 
       colors: {
-        white: "rgba(231, 227, 252, 0.87)",
-        primary: "#9155FD",
-        secondary: "#28243D",
+        white_text: "rgba(231, 227, 252, 0.87)",
+        primary: {
+          100: "#9155FD",
+          200: "#7D3AFD",
+          300: "#6A1FFD",
+          400: "#5604FD",
+          500: "#3D00E4",
+        },
+        secondary: {
+          100: "#28243D",
+          200: "#1E1A30",
+          300: "#14121F",
+          400: "#0A090F",
+          500: "#000000",
+        },
         yellow: {
           50: "#ffffe6",
           100: "#ffffb3",

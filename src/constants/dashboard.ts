@@ -9,7 +9,7 @@ export const DASHBOARD_NAV_LIST_ITEMS: NavLink[] = [
   },
   {
     name: "Sites",
-    icon : sitesI,
+    icon: sitesI,
     link: "/dashboard/sites",
   },
   {

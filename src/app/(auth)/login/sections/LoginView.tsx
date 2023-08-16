@@ -254,7 +254,7 @@ function LoginView() {
               <input
                 id="checked-checkbox"
                 type="checkbox"
-                className="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
+                className="w-4 h-4 text-primary-100 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
               />
               <label
                 htmlFor="checked-checkbox"
@@ -263,13 +263,13 @@ function LoginView() {
                 Remember Me{" "}
               </label>
               {/* TODO ADD LINK */}
-              <Link className="text-sm text-primary" href={""}>
+              <Link className="text-sm text-primary-100" href={""}>
                 Forgot Password?
               </Link>
             </div>
             <button
               onClick={onLogin}
-              className="w-full bg-primary text-white py-2 rounded-md hover:bg-primary transition duration-300"
+              className="w-full bg-primary-100 text-white py-2 rounded-md hover:bg-primary-100 transition duration-300"
               type="button"
             >
               Login
@@ -277,7 +277,7 @@ function LoginView() {
           </form>
           <div className="flex justify-center gap-1 items-center mt-10">
             <p className="text-xs text-gray-400">New on our platform?</p>
-            <Link className="text-primary text-sm" href="/signup">
+            <Link className="text-primary-100 text-sm" href="/signup">
               Create new account
             </Link>
           </div>
