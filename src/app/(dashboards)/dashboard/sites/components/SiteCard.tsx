@@ -24,9 +24,7 @@ function SiteCard(props: Props) {
             {props.name}
           </h5>
 
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            {props.description}
-          </p>
+          <p className="mb-3 font-normal text-gray-400">{props.description}</p>
         </div>
       </div>
     </Link>

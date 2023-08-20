@@ -3,55 +3,66 @@ import { settingI, homeI } from "@/assets/icons";
 
 export const SITE_NAV_LIST_ITEMS: NavLink[] = [
   {
-    name: "Dashboard",
+    name: "About Me",
     icon: homeI,
-    link: "/dashboard",
+    link: "/site:siteId/about-me",
+  },
+
+  // {
+  //   name: "Experiences",
+  //   icon: homeI,
+  //   link: "/dashboard",
+  //   type: "group",
+  //   links: [
+  //     {
+  //       name: "Work Experiences",
+  //       icon: homeI,
+  //       link: "/dashboard",
+  //     },
+  //     {
+  //       name: "Educations",
+  //       icon: homeI,
+  //       link: "/dashboard",
+  //     },
+  //   ],
+  // },
+  {
+    name: "Services",
+    icon: homeI,
+    link: "/site:siteId/services",
   },
   {
-    name: "Work Experiences",
+    name: "Projects",
+    icon: homeI,
+    link: "/site:siteId/projects",
+  },
+  {
+    name: "Skills",
+    icon: homeI,
+    link: "/site:siteId/skills",
+  },
+  {
+    name: "Cv",
     type: "divider",
   },
   {
     name: "Experiences",
     icon: homeI,
-    link: "/dashboard",
-    type: "group",
-    links: [
-      {
-        name: "Work Experiences",
-        icon: homeI,
-        link: "/dashboard",
-      },
-      {
-        name: "Educations",
-        icon: homeI,
-        link: "/dashboard",
-      },
-    ],
+    link: "/site:siteId/experiences",
   },
   {
     name: "Educations",
     icon: homeI,
-    link: "/dashboard",
+    link: "/site:siteId/educations",
   },
   {
-    name: "Projects",
-    icon: homeI,
-    link: "/dashboard",
+    name: "---",
+    type: "divider",
   },
-  {
-    name: "Awards",
-    icon: homeI,
-    link: "/dashboard",
-  },
-  {
-    name: "Publications",
-    icon: homeI,
-    link: "/dashboard",
-  },
+
   {
     name: "Settings",
     icon: settingI,
-    link: "/dashboard/settings",
+    link: "/site:siteId/settings",
   },
 ];

@@ -1,0 +1,15 @@
+import { ModeSwitcher } from "@/components/ui";
+import { Profile_A_View } from "@/templates";
+import React from "react";
+
+function Profile() {
+  // here we need to get the site raw data from the server, and decide which template to use
+  return (
+    <>
+      <ModeSwitcher />
+      <Profile_A_View />
+    </>
+  );
+}
+
+export default Profile;

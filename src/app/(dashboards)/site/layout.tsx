@@ -3,7 +3,6 @@ import {
   Nav,
   RightNav,
 } from "@/app/(dashboards)/dashboard/sections";
-import { DASHBOARD_NAV_LIST_ITEMS } from "@/constants/dashboard";
 import { SITE_NAV_LIST_ITEMS } from "@/constants/site-dashboard";
 
 export const metadata = {
@@ -16,10 +15,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const siteId = 1; // TODO: get siteId from context
+  const linksWithSiteId = SITE_NAV_LIST_ITEMS.map((item) => {
+    if (!item.link) return item;
+    return {
+      ...item,
+      link: item.link.replace(":siteId", `/${siteId.toString()}`),
+    };
+  });
   return (
     <>
       <Nav />
-      <RightNav navListItems={SITE_NAV_LIST_ITEMS} />
+      <RightNav navListItems={linksWithSiteId} />
       <ContentWrapper>{children}</ContentWrapper>
     </>
   );

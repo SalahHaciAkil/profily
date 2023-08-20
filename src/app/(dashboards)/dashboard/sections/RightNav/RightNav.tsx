@@ -6,6 +6,7 @@ import {
   NavListGroup,
   NavListItem,
 } from "@/app/(dashboards)/dashboard/sections/RightNav/components";
+import Link from "next/link";
 
 interface Props {
   navListItems: NavLink[];
@@ -19,6 +20,13 @@ function RightNav({ navListItems }: Props) {
       aria-label="Sidebar"
     >
       <div className="h-full px-3 pb-4 overflow-y-auto bg-secondary-100">
+        <div className="logo">
+          <Link href="/dashboard" className="flex items-center justify-center">
+            <h2 className="font-[cursive] text-[2rem] mb-[1rem] text-[#d947c1]">
+              Logo Here
+            </h2>
+          </Link>
+        </div>
         <ul className="space-y-2">
           {navListItems.map((item) => (
             <>

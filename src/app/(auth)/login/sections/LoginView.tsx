@@ -185,6 +185,7 @@ function LoginView() {
           <form className="mt-5">
             <div className="relative z-0 mb-6">
               <AuthInput
+                cy-data="email"
                 placeHolder="Email"
                 onChange={(e: any) =>
                   setUser({ ...user, email: e.target.value })
@@ -197,6 +198,7 @@ function LoginView() {
             </div>
             <div className="relative z-0 mb-6">
               <AuthInput
+                cy-data="password"
                 placeHolder="Password"
                 onChange={(e: any) => {
                   setUser({ ...user, password: e.target.value });
@@ -268,6 +270,7 @@ function LoginView() {
             </div>
 
             <button
+              cy-data="login-button"
               onClick={onLogin}
               className="w-full bg-primary-100 text-white py-2 rounded-md hover:bg-primary-100 transition duration-300"
               type="button"

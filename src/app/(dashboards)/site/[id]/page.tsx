@@ -1,17 +1,11 @@
 import React from "react";
-function Site({
-  params,
-}: {
-  params: {
-    id: string;
-  };
-}) {
-  const id = params.id;
+
+function SitePage() {
   return (
     <div>
-      <h1>THIS IS THE SIRE PAGE {id}</h1>
+      <h1>This is the Site Main Page</h1>
     </div>
   );
 }
 
-export default Site;
+export default SitePage;

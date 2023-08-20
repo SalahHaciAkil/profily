@@ -369,12 +369,16 @@ function SignUpView() {
                   I agree to
                 </label>
                 {/* TODO ADD LINK */}
-                <Link className="text-xs font-bold text-primary-100 ml-1" href={""}>
+                <Link
+                  className="text-xs font-bold text-primary-100 ml-1"
+                  href={""}
+                >
                   privacy policy & terms{" "}
                 </Link>
               </div>
 
               <button
+                cy-data="signup-button"
                 //TODO: onclick??
                 //  onClick={onLogin}
                 className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-primary-100 transition duration-300"

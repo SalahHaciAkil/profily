@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,6 +16,8 @@ module.exports = {
 
       colors: {
         white_text: "rgba(231, 227, 252, 0.87)",
+        black: "#212428",
+
         primary: {
           100: "#9155FD",
           200: "#7D3AFD",
@@ -80,6 +83,9 @@ module.exports = {
       },
       fontSize: {
         "7xl": "5rem",
+      },
+      screens: {
+        "3xl": "1600px",
       },
     },
   },
