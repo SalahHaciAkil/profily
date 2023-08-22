@@ -1,5 +1,6 @@
 import { ModeSwitcher } from "@/components/ui";
-import { Profile_A_View } from "@/templates";
+import { Profile_A_View } from "@/app/templates";
+import Link from "next/link";
 import React from "react";
 
 function Profile() {
