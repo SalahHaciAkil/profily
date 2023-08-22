@@ -1,0 +1,15 @@
+.deawerAnimation {
+  animation: drawerAni;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes drawerAni {
+  0% {
+    opacity: 0 !important;
+  }
+
+  100% {
+    opacity: 1 !important;
+  }
+}
