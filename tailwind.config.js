@@ -87,7 +87,16 @@ module.exports = {
       screens: {
         "3xl": "1600px",
       },
-    },
-  },
-  plugins: [],
-};
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+      },
+      plugins: [],
+    }
+  }
+}
