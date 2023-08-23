@@ -9,7 +9,7 @@ function ModeSwitcher() {
     document.documentElement.classList.remove("dark");
   }, [isDark]);
   return (
-    <div className="fixed top-3 right-3">
+    <div className="fixed top-2 right-3/4">
       <Button
         onClick={() => {
           if (isDark) return setIsDark(false);

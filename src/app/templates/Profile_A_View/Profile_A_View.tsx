@@ -1,14 +1,27 @@
-import React from "react";
+"use client";
+import { Intro } from "@/app/templates/Profile_A_View/sections";
+import { SectionWrapper } from "@/app/templates/components";
+import MainWrapper from "@/app/templates/components/MainWrapper";
+import { LeftNav, Nav } from "@/app/templates/components/ui";
+import { PROFILE_NAV_LINKS } from "@/constants/templates";
+import React, { useState } from "react";
 
 function Profile_A_View() {
+  const [drawerAni, setDrawerAni] = useState("-translate-x-[120%]");
+  const drawerFunc = () => {
+    if (drawerAni.includes("-translate-x-0"))
+      setDrawerAni("-translate-x-[120%]");
+    else setDrawerAni("-translate-x-0");
+  };
   return (
     <>
-      <div className="text-orange-400 dark:text-red-400">THIS IS THE TEXT</div>
-      <ul>
-        <li className="text-orange-300 dark:text-blue-300">
-          <a href="/dashboard">Navigate</a>
-        </li>
-      </ul>{" "}
+      <Nav drawerFunc={drawerFunc} navLinks={PROFILE_NAV_LINKS} />
+      <LeftNav drawerAni={drawerAni} navLinks={PROFILE_NAV_LINKS} />
+      <MainWrapper>
+        <SectionWrapper>
+          <Intro />
+        </SectionWrapper>
+      </MainWrapper>
     </>
   );
 }
