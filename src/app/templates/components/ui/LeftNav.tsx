@@ -12,7 +12,7 @@ function LeftNav({
     <>
       <div
         id="drawer-navigation"
-        className={`${drawerAni} fixed top-0 block left-0 z-40 h-screen p-4 md:hidden overflow-y-auto transition-transform bg-white w-4/6 dark:bg-black border-r-[1px] border-[#ffffff0d]`}
+        className={`${drawerAni} fixed top-0 block left-0 z-40 h-screen p-4 xl:hidden overflow-y-auto transition-transform bg-white w-[280px] dark:bg-black border-r-[1px] border-[#ffffff0d]`}
       >
         <div className="px-3.5 py-4 flex flex-col space-y-5">
           <Image
