@@ -10,13 +10,15 @@ const Nav = (props: prop) => {
   };
 
   return (
-    <nav className="bg-gray-100 border-gray-200 dark:bg-black border-b-[1px] dark:border-b-[#ffffff0d]">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
-        <a href="/5" className="flex items-center py-2">
+    <nav className="fixed top-0 right-0 left-0 z-30 lg:px-4 h-[5.3rem] bg-gray-100 border-gray-200 dark:bg-black border-b-[1px] dark:border-b-[#ffffff0d] ">
+    
+    <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
+  
+        <a href="/5" className="flex items-center  py-2 p-8 lg:p-2 mb-4 lg-mb-0">
           <Image
             width={50}
             height={50}
-            className="w-16 h-16 rounded-full"
+            className="w-16 h-16 rounded-full "
             src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
             alt="Large avatar"
           />
@@ -25,6 +27,7 @@ const Nav = (props: prop) => {
             PROFILE
           </span>
         </a>
+
         <button
           onClick={testFunc}
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -46,7 +49,11 @@ const Nav = (props: prop) => {
             />
           </svg>
         </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+
+        <div
+          className="hidden w-full md:pb-5 ml-4 pr-4 md:block md:w-auto"
+          id="navbar-default"
+        >
           <ul className="font-light text-sm flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700">
             {props.navLinks.map((item: string) => {
               return (
