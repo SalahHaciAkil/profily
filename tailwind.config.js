@@ -83,6 +83,12 @@ module.exports = {
         "hoverDarkGshadow": "0px 0px 11px 5px inset",
         "custom-light": "0 0 10px 0 rgba(0, 0, 0, 0.2)",
         "custom-dark": "0 7px 10px -2px gray",
+        "boxShadow": " -8px -8px 20px 0px white, 8px 10px 18px -19px gray",
+        "insetBoxShadow": "15px 15px 50px -29px #80808036 inset, -57px -83px 35px -17px #ffffff85 inset",
+        "darkBoxShadow": "-9px -9px 25px -8px #ffffff0a, 6px 3px 16px -7px #00000069",
+        "insetDarkBoxShadow": "-8px -14px 60px -69px #bdbdbd57 inset",
+        "hoverInsetDarkBoxShadow": "-12px -12px 65px -35px #00000087 inset",
+        "boxBackImg": "linear-gradient(119deg, #0000ff94, #ef0b33c4)"
       },
       fontSize: {
         "7xl": "5rem",
@@ -91,13 +97,13 @@ module.exports = {
         "3xl": "1600px",
       },
       keyframes: {
-        wiggle: {
+        wigglee: {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
         }
       },
       animation: {
-        wiggle: 'wiggle 1s ease-in-out infinite',
+        wigglee: 'wiggle 1s ease-in-out infinite',
       },
       plugins: [],
     }
