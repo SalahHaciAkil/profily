@@ -78,8 +78,11 @@ module.exports = {
         "4xl": "2rem",
       },
       boxShadow: {
+        "gshadow": "-8px -8px 9px 3px white, 8px 10px 17px -3px gray",
+        "darkGshadow": "-8px -8px 15px -16px white, 8px 10px 15px -16px gray",
+        "hoverDarkGshadow": "0px 0px 11px 5px inset",
         "custom-light": "0 0 10px 0 rgba(0, 0, 0, 0.2)",
-        "custom-dark": "0 0 10px 0 rgba(0, 0, 0, 0.6)",
+        "custom-dark": "0 7px 10px -2px gray",
       },
       fontSize: {
         "7xl": "5rem",
@@ -87,7 +90,16 @@ module.exports = {
       screens: {
         "3xl": "1600px",
       },
-    },
-  },
-  plugins: [],
-};
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+      },
+      plugins: [],
+    }
+  }
+}
