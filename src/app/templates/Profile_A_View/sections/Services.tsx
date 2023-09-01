@@ -4,7 +4,7 @@ import React from "react";
 const array = [0, 0, 0, 0, 0, 0];
 function Services() {
   return (
-    <div className="flex flex-col my-28">
+    <div className="flex flex-col">
       <div className="flex flex-col gap-5 w-fit mx-auto lg:mx-0 self-start px-6 mb-6">
         <h5 className="text-primary-400">FEATURES</h5>
         <h1 className="text-6xl dark:text-slate-300 font-bold">What I Do</h1>
@@ -14,8 +14,7 @@ function Services() {
           return <ProfileServiceCard key={index} />;
         })}
       </div>
-      <hr />
-    </div> 
+    </div>
   );
 }
 
