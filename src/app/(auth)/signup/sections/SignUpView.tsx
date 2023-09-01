@@ -22,11 +22,8 @@ function SignUpView() {
     try {
       setLoading(true);
       const response = await axios.post("/api/users/signup", user);
-      console.log("Signup success", response.data);
       router.push("/login");
     } catch (error: any) {
-      console.log("Signup failed", error.message);
-
       toast.error(error.message);
     } finally {
       setLoading(false);
@@ -380,7 +377,7 @@ function SignUpView() {
               <button
                 cy-data="signup-button"
                 //TODO: onclick??
-                //  onClick={onLogin}
+                onClick={onSignup}
                 className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-primary-100 transition duration-300"
                 type="button"
               >

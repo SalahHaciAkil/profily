@@ -6,9 +6,13 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider = "mysql"
+  url = env("DATABASE_URL_ADMIN")
+  shadowDatabaseUrl = env("DATABASE_URL_DEV_ADMIN")
+
 }
+
+
 model User {
   id                      String    @id @default(uuid()) // Use uuid() to generate UUIDs
   username                String    @unique
