@@ -6,7 +6,6 @@ function Profile() {
   // here we need to get the site raw data from the server, and decide which template to use
   return (
     <>
-      <ModeSwitcher />
       <Profile_A_View />
     </>
   );
