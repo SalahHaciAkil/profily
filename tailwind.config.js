@@ -98,12 +98,12 @@ module.exports = {
       },
       keyframes: {
         wigglee: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
+          '0%': { transform: "scale(0) " },
+          '100%': { transform: 'scale(1)' },
         }
       },
       animation: {
-        wigglee: 'wiggle 1s ease-in-out infinite',
+        wigglee: 'wigglee 0.4s ease-in-out forwards',
       },
       plugins: [],
     }

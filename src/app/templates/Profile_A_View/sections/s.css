@@ -1,0 +1,14 @@
+.ss{
+  animation-name: dd;
+  animation-fill-mode: forwards;
+  animation-duration: 0.4s;
+}
+
+@keyframes dd{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
