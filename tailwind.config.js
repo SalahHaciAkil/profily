@@ -82,7 +82,7 @@ module.exports = {
         "darkGshadow": "-8px -8px 15px -16px white, 8px 10px 15px -16px gray",
         "hoverDarkGshadow": "0px 0px 11px 5px inset",
         "custom-light": "0 0 10px 0 rgba(0, 0, 0, 0.2)",
-        "custom-dark": "0 7px 10px -2px gray",
+        "icon-dark": "0 7px 10px -2px gray",
         "boxShadow": " -8px -8px 20px 0px white, 8px 10px 18px -19px gray",
         "insetBoxShadow": "15px 15px 50px -29px #80808036 inset, -57px -83px 35px -17px #ffffff85 inset",
         "darkBoxShadow": "-9px -9px 25px -8px #ffffff0a, 6px 3px 16px -7px #00000069",

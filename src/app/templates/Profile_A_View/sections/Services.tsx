@@ -10,7 +10,7 @@ function Services() {
         <h1 className="text-6xl dark:text-slate-300 font-bold">What I Do</h1>
       </div>{" "}
       <div className="flex flex-row flex-wrap px-6 lg:gap-8">
-        {array.map((item, index) => {
+        {array.map((_, index) => {
           return <ProfileServiceCard key={index} />;
         })}
       </div>

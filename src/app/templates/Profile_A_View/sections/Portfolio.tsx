@@ -1,5 +1,5 @@
+import { PortfolioCard } from "@/app/templates/components/ui";
 import React from "react";
-import PortfolioCard from "./PortfolioCard";
 
 function Portfolio() {
   const cardNum = [0, 0, 0, 0, 0, 0];
@@ -11,7 +11,7 @@ function Portfolio() {
       </div>
 
       <div className="flex flex-wrap gap-5 ">
-        {cardNum.map((item, index) => {
+        {cardNum.map((_, index) => {
           return <PortfolioCard key={index} />;
         })}
       </div>

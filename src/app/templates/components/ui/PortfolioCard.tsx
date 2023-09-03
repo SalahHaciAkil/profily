@@ -301,7 +301,7 @@ const PortfolioCard = () => {
           </div>
         </div>
 
-        {position ? (
+        {position && (
           <div
             className={`fixed overflow-y-scroll transition ease-in-out group top-[-29px] bottom-0 right-0 left-0  bg-[#000000d4] z-40  duration-500`}
           >
@@ -393,7 +393,7 @@ const PortfolioCard = () => {
               </p>
             </div>
           </div>
-        ) : null}
+        )}
       </div>
     </div>
   );
