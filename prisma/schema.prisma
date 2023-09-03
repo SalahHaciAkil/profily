@@ -7,14 +7,32 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url = env("DATABASE_URL_ADMIN")
-  shadowDatabaseUrl = env("DATABASE_URL_DEV_ADMIN")
+  url = env("DATABASE_URL_DEV_ADMIN")
+  // shadowDatabaseUrl = env("DATABASE_URL_DEV_ADMIN")
+  relationMode = "prisma"
+}
 
+// Define an enum for section names
+enum SectionName {
+  EXPERIENCES
+  EDUCATION
+  PROJECTS
+  // Add other predefined section names as needed
+}
+
+
+// Define an enum for section names
+enum WebsiteTypes {
+  PERSONAL
+  COMPANY
+  BLOG
+  CV
+  CUSTOM
 }
 
 
 model User {
-  id                      String    @id @default(uuid()) // Use uuid() to generate UUIDs
+  id                      Int      @id @default(autoincrement()) // Use uuid() to generate UUIDs
   username                String    @unique
   email                   String    @unique
   password                String
@@ -24,4 +42,100 @@ model User {
   forgotPasswordTokenExpiry DateTime?
   verifyToken             String?
   verifyTokenExpiry       DateTime?
+  websites Website[]
+}
+
+// Define the Website model
+model Website {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  name        String
+  type        WebsiteTypes
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Define the one-to-many relationship between User and Website
+  user       User     @relation(fields: [userId], references: [id])
+  sections   Section[]
+
+  @@index([userId])
+}
+
+// Define the Section model
+model Section {
+  id          Int      @id @default(autoincrement())
+  websiteId   Int
+  sectionName SectionName
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Define the one-to-many relationship between Website and Section on delete cascade
+  website Website @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+
+  // Define the many-to-one relationship between Sections
+  experiences Experience[]
+  educations  Education[]
+  projects    Project[]
+  
+
+
+
+
+
+  @@index([websiteId])
+}
+
+
+
+// Define the Experience model
+model Experience {
+  id          Int      @id @default(autoincrement())
+  sectionId   Int
+  title       String
+  description String?
+  startDate   DateTime?
+  endDate     DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Define the one-to-one relationship between Section and Experience
+  section Section @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+
+  @@index([sectionId])
+}
+
+// Define the Education model
+model Education {
+  id          Int      @id @default(autoincrement())
+  sectionId   Int
+  institution String
+  degree      String?
+  fieldOfStudy String?
+  startDate   DateTime?
+  endDate     DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Define the one-to-one relationship between Section and Education
+  section Section @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+
+  @@index([sectionId])
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  sectionId   Int
+  title       String
+  description String?
+  startDate   DateTime?
+  endDate     DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Define the one-to-one relationship between Section and Project
+  section Section @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+
+  @@index([sectionId])
 }
