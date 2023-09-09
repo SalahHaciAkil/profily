@@ -1,5 +1,11 @@
 "use client";
-import { Intro } from "@/app/templates/Profile_A_View/sections";
+import {
+  Intro,
+  Services,
+  Portfolio,
+  Skills,
+  Contact
+} from "@/app/templates/Profile_A_View/sections";
 import { SectionWrapper } from "@/app/templates/components";
 import MainWrapper from "@/app/templates/components/MainWrapper";
 import { LeftNav, Nav } from "@/app/templates/components/ui";
@@ -20,6 +26,18 @@ function Profile_A_View() {
       <MainWrapper>
         <SectionWrapper>
           <Intro />
+        </SectionWrapper>
+        <SectionWrapper>
+          <Services />
+        </SectionWrapper>
+        <SectionWrapper>
+          <Portfolio />
+        </SectionWrapper>
+        <SectionWrapper>
+          <Skills />
+        </SectionWrapper>
+        <SectionWrapper>
+          <Contact />
         </SectionWrapper>
       </MainWrapper>
     </>

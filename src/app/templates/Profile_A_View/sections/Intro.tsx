@@ -3,7 +3,7 @@ import React from "react";
 function Intro() {
   return (
     <div className="pt-12">
-      <div className="flex space-x-7 pe-1 ps-4 lg:flex-row mt-24 mb-25 border-b-[2px] dark:border-b-[#ffffff0d]">
+      <div className="flex space-x-7 pe-1 ps-4 lg:flex-row mt-24">
         <div className="flex flex-col space-y-10 flex-1">
           <div className="flex flex-col space-y-7">
             <p className="tracking-widest	dark:text-slate-300	">
@@ -69,7 +69,7 @@ function Intro() {
         </div>
 
         <div className="flex-1 max-w-[40rem] relative hidden lg:block">
-          <div className=" shadow-xl shadow-slate-400 absolute dark:shadow-custom-dark z-50 h-64 w-96 top-44 right-2 lg:h-[70%] lg:right-[11%] lg:top-[18%] lg:min-w-[27rem] ">
+          <div className=" shadow-xl shadow-slate-400 absolute dark:shadow-icon-dark z-50 h-64 w-96 top-44 right-2 lg:h-[70%] lg:right-[11%] lg:top-[18%] lg:min-w-[27rem] ">
             {" "}
           </div>
           <svg
